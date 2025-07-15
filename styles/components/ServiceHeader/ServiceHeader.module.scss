@@ -1,0 +1,116 @@
+@import '../../variables';
+
+.header {
+    width: 100%;
+    height: $service-header-height;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    // overflow: hidden;
+    z-index: 5;
+}
+
+.header_space {
+    height: $service-header-height;
+}
+
+.title {
+    float: left;
+    font-family: 'pretendard';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: $service-header-height;
+    margin-left: 30px;
+    user-select: none;
+}
+
+.highlight {
+    background-color: rgb(7, 0, 100);
+    border-radius: 5px;
+    color: white;
+    padding: 3px 7px;
+    margin-right: 3px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+.menu_box {
+    float: left;
+    margin-left: 30px;
+    height: $service-header-height;
+    // width: 300px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.menu_item {
+    font-family: 'pretendard';
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: $service-header-height;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: rgb(170, 170, 170);
+    }
+}
+
+#menu_active {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+}
+
+.drawer_button {
+    display: none;
+}
+
+.drawer_box {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu_box, .menu_item {
+        display: none;
+    }
+
+    .title {
+        margin: auto;
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        // margin-top: 0px;
+        width: calc(100% - 50px);
+        // z-index: 200;
+    }
+
+    .drawer_button {
+        display: block;
+        // margin-top: 20px;
+        margin-left: 20px;
+        position: relative;
+        z-index: 150 !important;
+    }
+
+    .drawer_box {
+        display: block;
+        position: relative;
+        z-index: 15 !important;
+    }
+
+    .drawer {
+        position: relative;
+        // z-index: 11 !important;
+    }
+}

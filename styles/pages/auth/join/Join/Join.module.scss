@@ -1,0 +1,44 @@
+.box {
+  position: relative;
+  width: 480px;
+  padding: 0 20px;
+  margin: auto;
+  //background-color: red;
+  height: auto;
+  user-select: none;
+}
+
+.space {
+  height: 20px;
+}
+
+.title {
+  font-family: 'pretendard';
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.description {
+  font-family: 'pretendard';
+  font-weight: 300;
+  font-size: 15px;
+  margin-top: 10px;
+  color: black;
+}
+
+#highlight_purple {
+  position: absolute;
+  background: linear-gradient(to right, rgb(122, 122, 122), rgb(87, 78, 201));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+}

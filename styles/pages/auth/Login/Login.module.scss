@@ -1,0 +1,99 @@
+@import "../../../variables";
+
+.box {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+}
+
+.login {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 0px 50px 0 rgba(50, 50, 50, 0.3);
+}
+
+.title {
+    text-align: left;
+    font-family: 'pretendard';
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.title_info {
+    text-align: left;
+    margin-top: 5px;
+    font-size: 13px;
+    color: rgb(130, 130, 130);
+}
+
+.space {
+    height: 20px;
+}
+
+.kakao {
+    width: 100% ;
+    cursor: pointer;
+}
+
+.account_card {
+    margin: auto;
+    margin-top: 15px;
+    width: 350px;
+    max-height: 55px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    background-color: #FEE500;
+}
+
+.account_text{
+    font-family: 'pretendard';
+    font-size: 20px;
+    text-align: left;
+    font-weight: 700;
+    user-select: none;
+}
+
+.account_logout_box {
+    height: 45px;
+    width: auto;
+    padding: 0 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #191919;
+    margin-top: -10px;
+    margin-right: -10px;
+    border-radius: 15px;
+}
+
+.account_logout {
+    font-weight: 300;
+    line-height: 45px;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 350px) {
+    .login {
+        width: calc(100%);
+        // margin: auto;
+    }
+
+    .account_card {
+        width: 100%;
+        // margin: auto;
+    }
+
+    .space {
+        height: 20px;
+    }
+}
