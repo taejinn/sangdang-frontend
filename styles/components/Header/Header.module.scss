@@ -1,0 +1,42 @@
+@import '../../variables';
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: $header-height;
+    background-color: $header-background-color;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+}
+
+.header_space {
+    height: $header-height;
+}
+
+.title_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    font-size: 20px;
+    font-family: 'pretendard';
+    font-weight: 700;
+    text-align: center;
+    line-height: $header-height;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.highlight {
+    background: linear-gradient(to right, rgb(7, 0, 100), rgb(83, 71, 234));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    //background-color: rgb(7, 0, 100);
+    //color: white;
+    //padding: 3px 7px;
+    //margin-right: 3px;
+    //margin-left: 5px;
+}

@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model RentalData {
+  id                  Int      @id @default(autoincrement())
+  studentId           Int      @unique
+  notReturnedCount    Int      @default(0)
+  rentalBan           Boolean  @default(false)
+  rentalBanLatestDate DateTime?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @default(now())
+}
+
+model RentalLog {
+  id        Int      @id @default(autoincrement())
+  studentId Int
+  createdAt DateTime @default(now())
+  type      String
+}
+
+model CurrentRental {
+  id           Int      @id @default(autoincrement())
+  name         String   @db.VarChar(10)
+  studentId    Int      @unique
+  umbrellaName String
+  createdAt    DateTime @default(now())
+  notReturned  Boolean  @default(false)
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  kakao_id  String   @unique
+  admin     Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Settings {
+  id        Int      @id @default(autoincrement())
+  service   String
+  name      String   @unique
+  value     String
+  updatedAt DateTime
+}
